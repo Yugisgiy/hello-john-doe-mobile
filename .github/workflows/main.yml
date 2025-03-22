@@ -56,7 +56,7 @@ jobs:
           haxelib install flixel
           haxelib install flixel-tools
           haxelib install flixel-ui
-          haxelib install flixel-addons 3.2.2
+          haxelib install flixel-addons
           haxelib install tjson
           haxelib install hxvlc 1.7.1
           haxelib install hxjsonast
