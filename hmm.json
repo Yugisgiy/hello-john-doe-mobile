@@ -70,6 +70,12 @@
       "url": "https://github.com/ShadowMario/flxanimate"
     },
     {
+      "name": "hxvlc",
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/MobilePorting/hxvlc"
+    },
+    {
       "name": "linc_luajit",
       "type": "git",
       "dir": null,
