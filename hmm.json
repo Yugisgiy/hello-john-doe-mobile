@@ -36,6 +36,13 @@
       "url": "https://github.com/MobilePorting/hxcpp"
     },
     {
+      "name": "hxdiscord_rpc",
+      "type": "git",
+      "dir": null,
+      "ref": "main",
+      "url": "https://github.com/Yugisgiy/hxdiscord_rpc"
+    },
+    {
       "name": "flixel-addons",
       "type": "haxelib",
       "version": "3.2.1"
