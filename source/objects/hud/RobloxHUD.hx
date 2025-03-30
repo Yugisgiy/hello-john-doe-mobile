@@ -5,7 +5,7 @@ import flixel.FlxBasic;
 
 
 
-class RobloxHUD extends FlxTypedContainer implements Ihud
+class RobloxHUD extends FlxSpriteGroup implements Ihud
 {
 	public var isScripted:Bool;
 
