@@ -44,7 +44,6 @@ class PsychVideoSprite extends FlxVideoSprite
 
 
 }
-    }
 
 
     public override function destroy() {
