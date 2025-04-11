@@ -43,6 +43,7 @@ class PsychVideoSprite extends FlxVideoSprite
     }
 
 
+}
         super.pause();
         if (FlxG.autoPause) 
         {
