@@ -52,7 +52,7 @@ jobs:
           haxelib setup ~/haxelib
           haxelib git hxcpp https://github.com/Moxie-Stuff/hxcpp.git
           haxelib git lime https://github.com/Yugisgiy/lime
-          haxelib install openfl https://github.com/Yugisgiy/openfl
+          haxelib git openfl https://github.com/Yugisgiy/openfl
           haxelib install flixel 5.8.0 https://github.com/HaxeFlixel/flixel
           haxelib install flixel-tools
           haxelib install flixel-ui 2.6.1
@@ -60,7 +60,7 @@ jobs:
           haxelib install tjson
           haxelib git hxvlc 1.7.1 https://github.com/MAJigsaw77/hxvlc
           haxelib install hxjsonast 1.1.0
-          haxelib install hscript
+          haxelib install hscript 2.6.0
           haxelib install compiletime 2.8.0
           haxelib install flixel-screenshot-plugin
           haxelib git flxanimate https://github.com/beihu235/flxanimate
