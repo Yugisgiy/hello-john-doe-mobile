@@ -44,12 +44,6 @@ class PsychVideoSprite extends FlxVideoSprite
 
 
 }
-
-    public static function cacheVid(path:String) {
-        var video = new PsychVideoSprite();
-        video.load(path, [muted]);
-        video.addCallback(ONFORMAT,()->{video.destroy();});
-        video.play();
     }
 
 
