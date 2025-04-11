@@ -44,15 +44,6 @@ class PsychVideoSprite extends FlxVideoSprite
 
 
 }
-        super.pause();
-        if (FlxG.autoPause) 
-        {
-            if (FlxG.signals.focusGained.has(bitmap.resume)) FlxG.signals.focusGained.remove(bitmap.resume);
-            if (FlxG.signals.focusLost.has(bitmap.pause)) FlxG.signals.focusLost.remove(bitmap.pause);
-        }
-    }
-
-
         super.resume();
         if (FlxG.autoPause) 
         {
