@@ -45,18 +45,6 @@ class PsychVideoSprite extends FlxVideoSprite
 
 }
 
-    //maybe temp?
-    public function addCallback(vidCallBack:String,func:Void->Void) {
-        switch (vidCallBack) {
-            case 'onEnd':
-                if (func != null) bitmap.onEndReached.add(func);
-            case 'onStart':
-                if (func != null) bitmap.onOpening.add(func);
-            case 'onFormat':
-                if (func != null) bitmap.onFormatSetup.add(func);
-        }
-    }
-
     public static function cacheVid(path:String) {
         var video = new PsychVideoSprite();
         video.load(path, [muted]);
