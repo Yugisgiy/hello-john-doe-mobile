@@ -44,13 +44,6 @@ class PsychVideoSprite extends FlxVideoSprite
 
 
 }
-        super.resume();
-        if (FlxG.autoPause) 
-        {
-            if (!FlxG.signals.focusGained.has(bitmap.resume)) FlxG.signals.focusGained.add(bitmap.resume);
-            if (!FlxG.signals.focusLost.has(bitmap.pause)) FlxG.signals.focusLost.add(bitmap.pause);
-        }
-    }
 
     //maybe temp?
     public function addCallback(vidCallBack:String,func:Void->Void) {
@@ -83,15 +76,6 @@ class PsychVideoSprite extends FlxVideoSprite
     {
         load(_heldVideoPath, options == null ? [] : options);
         play();
-    }
-
-    public static function globalPause() {
-        for (i in heldVideos) i.pause();
-    }
-
-    public static function globalResume() {
-        for (i in heldVideos) i.resume();
-    }
 
 }
 
