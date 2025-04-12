@@ -96,8 +96,10 @@
     },
     {
       "name": "hxvlc",
-      "type": "haxelib",
-      "version": "1.7.1"
+      "type": "git",
+      "dir": null,
+      "ref": "main",
+      "url": "https://github.com/HomuHomu833-stuff/hxvlc"
     },
     {
       "name": "flxanimate",
