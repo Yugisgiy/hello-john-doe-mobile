@@ -42,8 +42,44 @@ class PsychVideoSprite extends FlxVideoSprite
         return b;
     }
 
+    public override function pause() {
 
-}
+        super.pause();
+        if (FlxG.autoPause) 
+        {
+            if (FlxG.signals.focusGained.has(bitmap.resume)) FlxG.signals.focusGained.remove(bitmap.resume);
+            if (FlxG.signals.focusLost.has(bitmap.pause)) FlxG.signals.focusLost.remove(bitmap.pause);
+        }
+    }
+
+    public override function resume() {
+
+        super.resume();
+        if (FlxG.autoPause) 
+        {
+            if (!FlxG.signals.focusGained.has(bitmap.resume)) FlxG.signals.focusGained.add(bitmap.resume);
+            if (!FlxG.signals.focusLost.has(bitmap.pause)) FlxG.signals.focusLost.add(bitmap.pause);
+        }
+    }
+
+    //maybe temp?
+    public function addCallback(vidCallBack:String,func:Void->Void) {
+        switch (vidCallBack) {
+            case 'onEnd':
+                if (func != null) bitmap.onEndReached.add(func);
+            case 'onStart':
+                if (func != null) bitmap.onOpening.add(func);
+            case 'onFormat':
+                if (func != null) bitmap.onFormatSetup.add(func);
+        }
+    }
+
+    public static function cacheVid(path:String) {
+        var video = new PsychVideoSprite();
+        video.load(path, [muted]);
+        video.addCallback(ONFORMAT,()->{video.destroy();});
+        video.play();
+    }
 
 
     public override function destroy() {
@@ -57,6 +93,15 @@ class PsychVideoSprite extends FlxVideoSprite
     {
         load(_heldVideoPath, options == null ? [] : options);
         play();
+    }
+
+    public static function globalPause() {
+        for (i in heldVideos) i.pause();
+    }
+
+    public static function globalResume() {
+        for (i in heldVideos) i.resume();
+    }
 
 }
 
