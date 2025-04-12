@@ -96,10 +96,8 @@
     },
     {
       "name": "hxvlc",
-      "type": "git",
-      "dir": null,
-      "ref": "main",
-      "url": "https://github.com/Yugisgiy/hxvlc"
+      "type": "haxelib",
+      "version": "1.7.1"
     },
     {
       "name": "flxanimate",
