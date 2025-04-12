@@ -53,7 +53,7 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
       
       - name: Compile
-        run: haxelib run lime build ${{ inputs.buildArgs }}
+        run: haxelib run lime build android ${{ inputs.buildArgs }}
       
       - name: Clear Previous Cache
         uses: actions/github-script@main
